@@ -1,13 +1,14 @@
-
-public class Funcionario {
+// não pode instanciar objetos dessa classe, porque é abstrata
+public abstract class Funcionario {
 	
 	private String nome;
 	private String cpf;
 	private double salario;
 	
-	public double getBonificacao() {
-		return this.salario * 0.1;
-	}
+	//protected double salario; // protected significa público apenas para si e para os filhos, as demais classes, não.
+	
+	// método sem corpo, não há implementação aqui, os filhos implementam
+	public abstract double getBonificacao();
 	
 	public String getNome() {
 		return nome;
